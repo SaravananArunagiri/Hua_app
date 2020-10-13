@@ -24,11 +24,13 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 import Stack from './Src/Navigation/Stack'
+import {ShowtimeContextProvider} from './Src/ContextStore/Store'
 const App: () => React$Node = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
       <Stack/>
+    
     </>
   );
 };

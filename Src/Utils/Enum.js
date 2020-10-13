@@ -31,6 +31,14 @@ export const  Fontsize={
   FONT_WEIGHT_MEDIUM: 600,
   FONT_WEIGHT_HEAVY: 800
 }
+
+export default font= {
+  PoppinsLight:'Poppins-Light',
+  PoppinsSemiBold:"Poppins-SemiBold",
+  PoppinsRegular:'Poppins-Regular',
+  PoppinsMedium:'Poppins-Medium'
+};
+
 export const  AppWidth={
   splashwidth:'100%'
 }
