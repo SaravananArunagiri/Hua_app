@@ -32,7 +32,8 @@ export const ShowtimeContextProvider = props => {
   const [state, dispatch] = useReducer(Studentreducer, studentinitialState);
  
   const [Loading, setLoading] = useState(true);
-  const [ParentId, SetParentId] = useState();
+  const [ParentId, SetParentIds] = useState();
+  const  [Token ,SetTokens] = useState() 
   const [Parentdetail,SetParentdetail] = useState();
   const [StudentDetails,SetStudentDetails] = useState();
 
@@ -67,8 +68,12 @@ export const ShowtimeContextProvider = props => {
      
       SetParentdetail,
       SetStudentDetails,
+      SetParentIds,
+      SetTokens,
       Parentdetail,
       StudentDetails,
+      Token,
+      ParentId,
       dispatch 
     }}>
       {props.children}

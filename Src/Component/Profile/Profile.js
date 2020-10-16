@@ -3,15 +3,14 @@ import {ScrollView, SafeAreaView} from 'react-native'
 import { Card, Avatar, Button ,Title,Paragraph } from 'react-native-paper';
 import {Header} from '../../UIcomponent/Header'
 import {globalStore} from '../../ContextStore/Store'
-
+import Studentprofile from './Studentprofile'
 const Profile = () => { 
     const appContext = useContext(globalStore)
     const {Parentdetail} = appContext
 
    return ( 
        
-    
-    <SafeAreaView>
+  <SafeAreaView>
   <Header/>      
   <ScrollView >  
 <Card >
@@ -42,33 +41,11 @@ const Profile = () => {
  <Paragraph>{Parentdetail.ParentAddress2}</Paragraph>
  <Paragraph>{Parentdetail.ParentAddress3}</Paragraph>  
 <Paragraph >{Parentdetail.ParentCountry}-{Parentdetail.ParentPostalCode} </Paragraph>      
- </Card.Content>  
+ </Card.Content> 
 
- <Card.Content style={{marginBottom:10,padding:10}} >
- <Title >Children</Title>        
- <Card>
-   
-    <Card.Content style={{flexDirection:'row',marginBottom:10}} >
-    <Avatar.Icon   icon="profile" />        
-   <Card.Content>
-   <Title>{Parentdetail.ParentName}</Title>
-   <Paragraph>{Parentdetail.ParentPhone}</Paragraph>
-   <Paragraph>{Parentdetail.ParentEmail} </Paragraph>  
-  
- </Card.Content>
-
- </Card.Content>
- <Card.Actions>
- <Button>Profile</Button>
- <Button>Schedule</Button>
-    </Card.Actions>
-  </Card>     
- </Card.Content>  
-
-
-
-
+ <Studentprofile />
   </Card>
+ 
   </ScrollView> 
   </SafeAreaView>
    )

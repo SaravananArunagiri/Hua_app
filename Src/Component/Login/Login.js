@@ -6,7 +6,8 @@ var qs = require('qs');
 export default Login=({navigation})=>{
   
   const appContext = useContext(globalStore)
-  const {SetParentdetail,SetStudentDetails} = appContext
+  const {SetParentdetail,SetStudentDetails,SetParentIds,
+    SetTokens} = appContext
     const [Username,Setusername]=useState()
     const [Password,SetPassword]=useState() 
     // const [Parentdetail,SetParentdetail] = useState();
@@ -59,18 +60,24 @@ export default Login=({navigation})=>{
              console.log(err);
          }) .finally(() => setLoading(false));
     }
-      
+     
     useEffect(() => { 
-      if(Token!=undefined &&  ParentId!=undefined){
-        login()
-       }
+     
+      if(Token!=undefined && ParentId!=undefined){
+        SetParentIds(ParentId),
+        SetTokens(Token)
+      }
+
+       
   },[Token,ParentId]);
+
+  
+
  
-  const login=()=>{
+  const login=async()=>{
    setLoading(true)
-   StudentToken()
-  if(Token!=undefined &&  ParentId!=undefined){
-    
+  await StudentToken()
+  if(Token!=undefined  &&  ParentId!=undefined){
     navigation.navigate('Dashboard')
    }
 
