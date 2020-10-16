@@ -9,6 +9,7 @@ import Dashboard from './Drawer'
 import {ShowtimeContextProvider} from '../ContextStore/Store'
 import Studentdetail from '../Component/Profile/Studentdetail'
 import Schedule from '../Component/Schedules/Schedule'
+import Makeuplesson from '../Component/MakeupLesson/Makeuplisting'
 const Stack = createStackNavigator();
 
 export default stack=()=> {
@@ -19,8 +20,50 @@ export default stack=()=> {
         <Stack.Screen name="Splash " component={Splash} options={{headerShown:false}}/>
          <Stack.Screen name="Login" component={Login} options={{headerShown:false}}/>
           <Stack.Screen name="Dashboard" component={Dashboard} options={{headerShown:false}}/> 
-          <Stack.Screen name="studentdetail" component={Studentdetail}/>   
-          <Stack.Screen name="Schedule" component={Schedule}/>     
+          <Stack.Screen name="studentdetail" component={Studentdetail}         options={{
+          title: 'Profile',
+          headerStyle: {
+            backgroundColor: 'orange',
+          },
+          headerTintColor: '#fff',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          
+          },
+          headerTitleAlign:'center'
+        }}/>   
+          <Stack.Screen name="Schedule" component={Schedule} 
+           options={{
+            title: 'Schedule',
+            headerStyle: {
+              backgroundColor: 'orange',
+            },
+            headerTintColor: '#fff',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+            
+            },
+            headerTitleAlign:'center'
+          }}
+          
+          />    
+          <Stack.Screen name="makeuplist" component={Makeuplesson} 
+           options={{
+            title: 'MakeupLesson',
+            headerStyle: {
+              backgroundColor: 'orange',
+            },
+            headerTintColor: '#fff',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+            
+            },
+            headerTitleAlign:'center'
+          }}
+          
+          
+          
+          /> 
            <Stack.Screen name="Forget" component={Forget} />
         </Stack.Navigator>
       </NavigationContainer>

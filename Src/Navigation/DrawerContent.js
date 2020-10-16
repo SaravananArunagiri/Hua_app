@@ -25,7 +25,7 @@ const [state,Setstate]=useState([
  {id:'Programme Register',routes:'Register',path:require('../Assets/Images/profile.png'),margins:85},
  { id:'Message',routes:'message',path:require('../Assets/Images/message.png'),margins:135},
  { id:'Results', routes:'results',path:require('../Assets/Images/result.png'),margins:190},
- {id:'MakeupLesson',routes:'makeuplesson',path:require('../Assets/Images/makup.png'),margins:240},
+ {id:'MakeupLesson',routes:'makeuplist',path:require('../Assets/Images/makup.png'),margins:240},
  {id:'Invoice', routes:'invoice',path:require('../Assets/Images/invoice.png'),margins:295},
  {id:'Attendance', routes:'attendance',path:require('../Assets/Images/attendance.png'),margins:350},
  {id:'Log out', routes:'logout',path:require('../Assets/Images/logout.png'),margins:400},
@@ -51,7 +51,7 @@ const [state,Setstate]=useState([
            <Image source={route.path}  style={{height:40,width:35,position:'absolute',marginVertical:route.margins,marginHorizontal:4}}   />
           <DrawerItem         
           key={route.id}
-          style={{borderBottomWidth:.5,borderBottomColor:'rgb(119,134,158)',opacity:1,marginLeft:45}} labelStyle={{fontFamily:font.PoppinsSemiBold,color:'black',fontSize:15,lineHeight:18}} label={route.id}  onPress={() =>console.log('done')
+          style={{borderBottomWidth:.5,borderBottomColor:'rgb(119,134,158)',opacity:1,marginLeft:45}} labelStyle={{fontFamily:font.PoppinsSemiBold,color:'black',fontSize:15,lineHeight:18}} label={route.id}  onPress={() =>navigation.navigate(route.routes)
          
           } />
 

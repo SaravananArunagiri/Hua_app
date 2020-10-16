@@ -3,6 +3,7 @@ import {View,Text} from 'react-native'
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import Tab from './Tabs'
 import CustomDrawerContent from './DrawerContent'
+
 const Drawers = createDrawerNavigator();
 
 export default Drawer=()=> {

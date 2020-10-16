@@ -49,7 +49,6 @@ export default Login=({navigation})=>{
          ])
          .then((value) => {
             SetToken(value[0].access_token)
-           
             SetParentId(value[0].parentId)
             SetParentdetail(value[1])
             SetStudentDetails(value[2])

@@ -32,6 +32,7 @@ const Studentdetail = ({route}) => {
     <Card.Content style={{flexDirection:'row',marginBottom:10}} >
      <Avatar.Icon   icon="profile" />        
          <Card.Content>
+       <Title>{itemId.StudentName}</Title>
           <Paragraph>{ itemId.StudentLevel}</Paragraph>
           <Paragraph>{ itemId.StudentSchoolName}</Paragraph>
           </Card.Content>
